@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGL Spam Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <div class="container">
+        <div class="glow-effect"></div>
+        
+        <div class="header">
+            <h1>NGL SPAM TOOL</h1>
+            <div class="line"></div>
+            <p class="subtitle">Pengirim Pesan Anonim</p>
+        </div>
+        
+        <form id="spamForm">
+            <div class="input-group">
+                <label for="nglUrl">TARGET URL</label>
+                <input 
+                    type="text" 
+                    id="nglUrl" 
+                    placeholder="https://ngl.link/username atau hanya username" 
+                    required
+                >
+                <div class="input-line"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="message">PESAN</label>
+                <textarea 
+                    id="message" 
+                    placeholder="Tulis pesanmu disini..." 
+                    required
+                ></textarea>
+                <div class="input-line"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="count">JUMLAH</label>
+                <input 
+                    type="number" 
+                    id="count" 
+                    value="1" 
+                    min="1" 
+                    max="100"
+                    required
+                >
+                <div class="input-line"></div>
+                <span class="input-note">Maksimal 100 pesan</span>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="btn-send">
+                    <span class="btn-text">KIRIM SPAM</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button type="button" class="btn-reset" onclick="resetForm()">
+                    <span class="btn-text">RESET</span>
+                </button>
+            </div>
+        </form>
+        
+        <div class="loading" id="loading">
+            <div class="spinner-container">
+                <div class="spinner"></div>
+                <div class="spinner-inner"></div>
+            </div>
+            <p class="loading-text">Mengirim pesan<span class="dots"></span></p>
+        </div>
+        
+        <div class="result" id="result"></div>
+        
+        <div class="footer-note">
+            <div class="warning-icon">!</div>
+            <p>Gunakan tool ini dengan bijak. Spam berlebihan dapat menyebabkan pembatasan akun.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+          </html>
