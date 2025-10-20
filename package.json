@@ -1,0 +1,23 @@
+{
+  "name": "ngl-spam-tool",
+  "version": "1.0.0",
+  "description": "NGL Spam Tool with Edge Runtime",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "ngl",
+    "spam",
+    "vercel",
+    "edge"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  }
+}
